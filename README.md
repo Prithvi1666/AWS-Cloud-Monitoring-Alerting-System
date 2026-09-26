@@ -48,9 +48,3 @@ This project demonstrates a cloud-native monitoring and alerting system using **
    │
 8. ✅ Server comes back healthy - problem solved automatically!
 
-## 👨‍💻 Author
-### **Harshal Pathak**
-Linkdin- https://www.linkedin.com/in/harshal-pathak-4b6754259/  
-Portfolio- https://harshal15.framer.website/  
-
-```
