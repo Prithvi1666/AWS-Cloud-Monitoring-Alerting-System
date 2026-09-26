@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prithviraj Portfolio - AWS Monitoring Demo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #121212;
+            color: #f0f0f0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #00bcd4;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            color: #ccc;
+        }
+        .metrics {
+            background: #2c2c2c;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        .metrics h3 {
+            color: #ff9800;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 8px 0;
+            border-bottom: 1px solid #444;
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1em;
+            background: #00bcd4;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #0097a7;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prithviraj Portfolio Website</h1>
+        <p>Welcome to my AWS Monitoring System demo. This showcases real-time metrics and alerting via CloudWatch.</p>
+        
+        <div class="metrics">
+            <h3>📊 System Metrics (Monitored by CloudWatch)</h3>
+            <ul>
+                <li>🔥 CPU Utilization</li>
+                <li>🌐 Network Traffic</li>
+                <li>✅ Status Checks</li>
+            </ul>
+        </div>
+        
+        <h3>⚙️ Load Generator</h3>
+        <button onclick="generateLoad()">Generate CPU Load (Trigger Alarm)</button>
+        
+        <script>
+            function generateLoad() {
+                fetch('/generate-load')
+                .then(() => alert('✅ CPU load generated! Check your email for alarm.'))
+                .catch(() => alert('⚠️ Load generation started'));
+            }
+        </script>
+    </div>
+</body>
+</html>
